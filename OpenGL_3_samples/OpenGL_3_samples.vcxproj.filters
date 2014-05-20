@@ -33,12 +33,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="simplest_vertex.glsl">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="simplest_fragment.glsl">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
 </Project>

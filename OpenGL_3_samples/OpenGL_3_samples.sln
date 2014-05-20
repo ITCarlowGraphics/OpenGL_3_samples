@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleMagentaPrimitives_VBO_FFP", "OpenGL_3_samples.vcxproj", "{5C18A8C5-A4AA-4A68-8CE0-FA14B9268BA6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleMagentaPrimitives_VBO", "OpenGL_3_samples.vcxproj", "{5C18A8C5-A4AA-4A68-8CE0-FA14B9268BA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFiles", "CommonFiles", "{4F29E483-6DC7-44BD-911A-D59959568001}"
+	ProjectSection(SolutionItems) = preProject
+		..\shaders\coloured_fragment.glsl = ..\shaders\coloured_fragment.glsl
+		..\shaders\coloured_vertex.glsl = ..\shaders\coloured_vertex.glsl
+		..\shaders\simplest_fragment.glsl = ..\shaders\simplest_fragment.glsl
+		..\shaders\simplest_vertex.glsl = ..\shaders\simplest_vertex.glsl
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleColouredPrimitives_VBO", "..\SimpleColouredPrimitives_VBO\SimpleColouredPrimitives_VBO.vcxproj", "{29ACA0D2-F71B-491C-9687-DD973E460D8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,10 @@ Global
 		{5C18A8C5-A4AA-4A68-8CE0-FA14B9268BA6}.Debug|Win32.Build.0 = Debug|Win32
 		{5C18A8C5-A4AA-4A68-8CE0-FA14B9268BA6}.Release|Win32.ActiveCfg = Release|Win32
 		{5C18A8C5-A4AA-4A68-8CE0-FA14B9268BA6}.Release|Win32.Build.0 = Release|Win32
+		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Debug|Win32.Build.0 = Debug|Win32
+		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Release|Win32.ActiveCfg = Release|Win32
+		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

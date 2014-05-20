@@ -17,6 +17,13 @@
 
 
 
+void fatalError(const char* s){
+		perror(s);
+		system("pause");
+		exit(-1);
+}
+
+
 
 void setUpOpenGL(){
 	
@@ -85,7 +92,9 @@ int main()
 
 	//set up shader
 	sf::Shader shader; //create a shader object
-	shader.loadFromFile("simplest_vertex.glsl","simplest_fragment.glsl"); //load shader code from these text files
+	if(!shader.loadFromFile("..//shaders//simplest_vertex.glsl","..//shaders//simplest_fragment.glsl")){
+		fatalError("Problem loading glsl files");
+	}//load shader code from these text files
 	sf::Shader::bind(&shader);//
 	glEnableVertexAttribArray(0); //open up the 0th attribute to receive data, in this case this is the 'position' attribute in the shader
 
