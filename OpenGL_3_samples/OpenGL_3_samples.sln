@@ -7,11 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFiles", "CommonFiles"
 	ProjectSection(SolutionItems) = preProject
 		..\shaders\coloured_fragment.glsl = ..\shaders\coloured_fragment.glsl
 		..\shaders\coloured_vertex.glsl = ..\shaders\coloured_vertex.glsl
+		..\shaders\move_vertex.glsl = ..\shaders\move_vertex.glsl
+		..\shaders\spin_y_vertex.glsl = ..\shaders\spin_y_vertex.glsl
 		..\shaders\simplest_fragment.glsl = ..\shaders\simplest_fragment.glsl
 		..\shaders\simplest_vertex.glsl = ..\shaders\simplest_vertex.glsl
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleColouredPrimitives_VBO", "..\SimpleColouredPrimitives_VBO\SimpleColouredPrimitives_VBO.vcxproj", "{29ACA0D2-F71B-491C-9687-DD973E460D8C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleMoveObjects", "..\ConsoleApplication1\ConsoleApplication1.vcxproj", "{6778A765-E120-4142-B559-DE0ED9400ED5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawPolygon", "..\DrawPolygon\DrawPolygon.vcxproj", "{502BFF93-5870-477F-9779-818E3C461099}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RotatePolygon", "..\RotatePolygon\RotatePolygon.vcxproj", "{CA525BB8-2918-4CB1-9218-A02344315148}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DCube", "..\3DCube\3DCube.vcxproj", "{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,22 @@ Global
 		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Debug|Win32.Build.0 = Debug|Win32
 		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Release|Win32.ActiveCfg = Release|Win32
 		{29ACA0D2-F71B-491C-9687-DD973E460D8C}.Release|Win32.Build.0 = Release|Win32
+		{6778A765-E120-4142-B559-DE0ED9400ED5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6778A765-E120-4142-B559-DE0ED9400ED5}.Debug|Win32.Build.0 = Debug|Win32
+		{6778A765-E120-4142-B559-DE0ED9400ED5}.Release|Win32.ActiveCfg = Release|Win32
+		{6778A765-E120-4142-B559-DE0ED9400ED5}.Release|Win32.Build.0 = Release|Win32
+		{502BFF93-5870-477F-9779-818E3C461099}.Debug|Win32.ActiveCfg = Debug|Win32
+		{502BFF93-5870-477F-9779-818E3C461099}.Debug|Win32.Build.0 = Debug|Win32
+		{502BFF93-5870-477F-9779-818E3C461099}.Release|Win32.ActiveCfg = Release|Win32
+		{502BFF93-5870-477F-9779-818E3C461099}.Release|Win32.Build.0 = Release|Win32
+		{CA525BB8-2918-4CB1-9218-A02344315148}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA525BB8-2918-4CB1-9218-A02344315148}.Debug|Win32.Build.0 = Debug|Win32
+		{CA525BB8-2918-4CB1-9218-A02344315148}.Release|Win32.ActiveCfg = Release|Win32
+		{CA525BB8-2918-4CB1-9218-A02344315148}.Release|Win32.Build.0 = Release|Win32
+		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Debug|Win32.Build.0 = Debug|Win32
+		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Release|Win32.ActiveCfg = Release|Win32
+		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
