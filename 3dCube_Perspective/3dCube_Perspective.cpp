@@ -127,7 +127,7 @@ int main()
 
 	//set up shader
 	sf::Shader shader; //create a shader object
-	if(!shader.loadFromFile("..//shaders//spin_y_vertex.glsl","..//shaders//simplest_fragment.glsl")){
+	if(!shader.loadFromFile("..//shaders//spin_and_move.glsl","..//shaders//simplest_fragment.glsl")){
 		fatalError("Problem loading glsl files");
 	}//load shader code from these text files
 
@@ -135,6 +135,8 @@ int main()
 	glEnableVertexAttribArray(0); //open up the 0th attribute to receive data, in this case this is the 'position' attribute in the shader
 	
 	float angle=0;
+	//sf::Vector3f translate(0.5,0.5,0.5);
+	sf::Vector3f translate(0,0,0.5);
 	
 	// this is our game loop
 	while (window.isOpen())
@@ -172,7 +174,10 @@ int main()
 		//update the angle
 		angle+=0.0001;
 
+
 		shader.setParameter("angle",angle);
+		shader.setParameter("translate",translate);
+		shader.setParameter("viewplane",-1);
 
 		
 

@@ -8,9 +8,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFiles", "CommonFiles"
 		..\shaders\coloured_fragment.glsl = ..\shaders\coloured_fragment.glsl
 		..\shaders\coloured_vertex.glsl = ..\shaders\coloured_vertex.glsl
 		..\shaders\move_vertex.glsl = ..\shaders\move_vertex.glsl
-		..\shaders\spin_y_vertex.glsl = ..\shaders\spin_y_vertex.glsl
 		..\shaders\simplest_fragment.glsl = ..\shaders\simplest_fragment.glsl
 		..\shaders\simplest_vertex.glsl = ..\shaders\simplest_vertex.glsl
+		..\shaders\spin_and_move.glsl = ..\shaders\spin_and_move.glsl
+		..\shaders\spin_y_vertex.glsl = ..\shaders\spin_y_vertex.glsl
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleColouredPrimitives_VBO", "..\SimpleColouredPrimitives_VBO\SimpleColouredPrimitives_VBO.vcxproj", "{29ACA0D2-F71B-491C-9687-DD973E460D8C}"
@@ -22,6 +23,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RotatePolygon", "..\RotatePolygon\RotatePolygon.vcxproj", "{CA525BB8-2918-4CB1-9218-A02344315148}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DCube", "..\3DCube\3DCube.vcxproj", "{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3dCube_Perspective", "..\3dCube_Perspective\3dCube_Perspective.vcxproj", "{E61AB6DB-4EB9-4587-B945-EE209B31F441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +56,10 @@ Global
 		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Debug|Win32.Build.0 = Debug|Win32
 		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Release|Win32.ActiveCfg = Release|Win32
 		{FD7FBE32-CEEC-4ACE-93F3-F53953BAEE1F}.Release|Win32.Build.0 = Release|Win32
+		{E61AB6DB-4EB9-4587-B945-EE209B31F441}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E61AB6DB-4EB9-4587-B945-EE209B31F441}.Debug|Win32.Build.0 = Debug|Win32
+		{E61AB6DB-4EB9-4587-B945-EE209B31F441}.Release|Win32.ActiveCfg = Release|Win32
+		{E61AB6DB-4EB9-4587-B945-EE209B31F441}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

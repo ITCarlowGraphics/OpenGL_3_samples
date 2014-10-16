@@ -62,6 +62,8 @@ int main()
 		-0.5, -0.5, 0
 	};
 
+	//0.5, 0.5, 0,0.5, -0.5, 0,-0.5, -0.5, 0
+
 	GLuint positionsBufferObject1; //integer variable to store the VBO handle
 	glGenBuffers(1, &positionsBufferObject1); //generate a new VBO, store the handle in the handle variable
     glBindBuffer(GL_ARRAY_BUFFER, positionsBufferObject1); //make positionsBufferObject the 'current' VBO for next few commands
