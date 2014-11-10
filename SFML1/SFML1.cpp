@@ -22,6 +22,11 @@
 #include "SFML/OpenGL.hpp" 
 #include <iostream> 
 
+//FMOD includes
+#pragma comment(lib,"fmodex_vc.lib")
+#include "fmod.hpp"
+#include "fmod_errors.h"
+
 
   
 ////////////////////////////////////////////////////////////
@@ -36,7 +41,7 @@ int main()
    
 	//load a font
 	sf::Font font;
-	font.loadFromFile("C:\\Windows\\Fonts\\GARA.TTF");
+	font.loadFromFile("C:\\Windows\\Fonts\\Arial.TTF");
 
 	//create a formatted text string
     sf::Text text;
@@ -69,6 +74,37 @@ int main()
 	float rotationVel=1.0;
 
 	
+	//setup FMOD
+	FMOD::System *FMODsys; //the FMOD sytem
+	FMOD_RESULT result;
+	result = FMOD::System_Create(&FMODsys); 	// Create the main system object.
+	if (result != FMOD_OK)
+	{
+		std::cout << "FMOD error! " << result << FMOD_ErrorString(result);
+		
+	}
+ 
+	result = FMODsys->init(100, FMOD_INIT_NORMAL, 0);   // Initialize FMOD.
+     
+	if (result != FMOD_OK)
+	{
+		std::cout << "FMOD error! " << result << FMOD_ErrorString(result);
+		
+	}
+
+	FMOD::Sound *sound;
+result = FMODsys->createSound(
+    "C:\\SDKS\\FMOD Programmers API Windows\\examples\\media\\wave.mp3",
+    FMOD_DEFAULT,
+    0,
+    &sound);
+if (result != FMOD_OK)
+{
+    std::cout << "FMOD error! (%d) %s\n" << result;
+   
+}
+FMOD::Channel *channel;
+FMODsys->playSound(FMOD_CHANNEL_FREE, sound, false, &channel);
    
        
     // Start game loop 
@@ -84,12 +120,28 @@ int main()
    
             // Escape key : exit 
             if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::Escape)) 
-                window.close(); 
+                window.close();  
+			
+
+			
+			if ((Event.type == sf::Event::KeyPressed) && (Event.key.code == sf::Keyboard::Up)) {
+                rotationVel*=0.95;
+				FMOD::Channel *channel;
+				FMODsys->playSound(
+					FMOD_CHANNEL_FREE, //finda free channel
+					sound,          	// sound to play
+					true,      	//start paused
+					0);         	//channel reference
+			}
              
     
         } 
 
-		pos+=vel;
+		FMODsys->update();
+		sf::Transform C;
+		C.translate(400,300);
+
+		//pos+=vel;
 		sf::Transform T;
 		T.translate(pos);
 
@@ -97,7 +149,7 @@ int main()
 		sf::Transform R;
 		R.rotate(rotation);
 
-		sf::Transform M=R*T;
+		sf::Transform M=C*R;
 
 		//update lines
 		for(int i=0;i<size;i++){
